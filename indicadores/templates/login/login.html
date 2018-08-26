@@ -3,6 +3,11 @@
 
 
 {%block content%}
+    {% if user.is_authenticated %}
+        <script>
+            window.location.href = "/home";
+        </script>
+    {% endif %}
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">

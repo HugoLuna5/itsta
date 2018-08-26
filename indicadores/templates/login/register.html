@@ -2,6 +2,13 @@
 
 
 {%block content%}
+
+     {% if user.is_authenticated %}
+        <script>
+            window.location.href = "/home";
+        </script>
+    {% endif %}
+
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -54,12 +61,13 @@
                             </div>
 
 
-                            <div class="form-group">
-                                <label for="carrera" class="col-md-4 control-label">Departamento</label>
+                            <!--
+<div class="form-group">
+                                <label for="departamento" class="col-md-4 control-label">Departamento</label>
 
                                 <div class="col-md-6">
 
-                                    <select class="form-control" name="carrera" id="carrera">
+                                    <select class="form-control" name="departamento" id="departamento">
                                         <option value="1">INGENIERIA EN AGRONOMIA</option>
                                         <option value="2">INGENIERIA  ELECTRONICA</option>
                                         <option value="3">INGENIERIA INDUSTRIAL</option>
@@ -82,6 +90,7 @@
 
                             </div>
 
+                            -->
 
                             <div class="form-group">
                                 <label for="password" class="col-md-4 control-label">Contraseña</label>

@@ -13,9 +13,9 @@ from indicadores.models import Profile
 class ProfileAdmin(admin.ModelAdmin):
     """Profile admin."""
 
-    list_display = ('pk', 'user', 'phone_number', 'website', 'picture')
+    list_display = ('pk', 'user', 'phone_number', 'picture')
     list_display_links = ('pk', 'user',)
-    list_editable = ('phone_number', 'website', 'picture')
+    list_editable = ('phone_number', 'picture')
 
     search_fields = (
         'user__email',
@@ -38,8 +38,7 @@ class ProfileAdmin(admin.ModelAdmin):
         }),
         ('Extra info', {
             'fields': (
-                ('website', 'phone_number'),
-                ('biography')
+                ('phone_number'),
             )
         }),
         ('Metadata', {

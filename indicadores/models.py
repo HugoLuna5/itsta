@@ -12,12 +12,10 @@ class Profile(models.Model):
     """
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    carrera = models.TextField(blank=True)
-    website = models.URLField(max_length=200, blank=True)
-    biography = models.TextField(blank=True)
+    departamento = models.TextField(blank=True)
     phone_number = models.CharField(max_length=20, blank=True)
     institute = models.CharField(max_length=500, blank=True)
-    rol = models.CharField(max_length=20, blank=True)
+    rol = models.CharField(max_length=50, blank=True)
 
     picture = models.ImageField(
         upload_to='users/pictures',

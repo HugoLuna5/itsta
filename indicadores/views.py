@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView, DetailView, FormView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import views as auth_views
+from django.contrib.auth import authenticate
 
 
 from django.contrib.auth import login, authenticate
@@ -11,7 +12,6 @@ from django.shortcuts import render, redirect
 from django.urls import reverse, reverse_lazy
 from indicadores.forms import SignupForm
 
-# Create your views here.
 # Create your views here.
 
 
@@ -43,3 +43,4 @@ class LogoutView(LoginRequiredMixin, auth_views.LogoutView):
 
 class HomeView(TemplateView):
     template_name = "home/index.html"
+
